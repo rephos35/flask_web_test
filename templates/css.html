@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css</title>
+
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <!-- css style -->
+        <style>
+            body {
+                background-image: url("/static/image/bg.png");
+            }
+            /* class: [Heading]. */
+            .name{
+                color: darkorange;
+            }
+
+            /* id: [Heading]# */
+            #flaky{
+                color: mediumvioletred;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Hello CSS!</h1>
+        <p>ex1.</p>
+        <p class="name" id="flippy">flippy</p>
+        <p class="name" id="flaky">flaky</p>
+        <p>ex2.</p>
+        <p style="color:white;">The words.</p>
+    </body>
+</html>

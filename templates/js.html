@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> js </title>
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"> </script>
+        <!-- js function -->
+    </head>
+    <body>
+        <script>alert ( "ex0. JS World!" );</script>
+        <p>ex1.</p>
+        <script>document.write("<p>JS write html.</p>")</script>
+        <p>ex2.</p>
+        <button type="button" onclick="alert('You push the button!')">Push me!</button><br>
+        <p>ex3.</p>
+        <input type="text" id="input" >
+        <!-- <script> 
+        function isNumber(){
+            var x = document.getElementById("input").value; // get id
+            var y = document.getElementById("chb");
+            if (x==""||isNaN(x)){ 
+                alert("Not number");
+                y.innerHTML="No";
+            }else{
+                alert("Number");
+                y.innerHTML="Yes";
+            }
+        }</script> -->
+        <button type="button" onclick="isNumber()" id="chb">Number?</button>
+        <p>ex4.</p>
+        <!-- <script> 
+        function changeImage(){
+            x = document.getElementById("chi"); // get id
+            if (x.src.match("emoji1")){ 
+                x.src="{{url_for('static', filename='image/emoji2.png')}}";
+            }else{
+                x.src="{{url_for('static', filename='image/emoji1.png')}}";
+            }
+        }</script> -->
+        <img type="img" onclick="changeImage()" id="chi" src="{{url_for('static', filename='image/emoji1.png')}}" \
+        width="100" height="100">
+    </body>
+</html>
